@@ -1,0 +1,249 @@
+:root {
+    --blue: #007bff;
+    --dark-blue: #0056b3;
+    --light-black: #333;
+    --cream: #ccc;
+    --white: #fff;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+body,
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styling For Form */
+
+form {
+    max-width: 800px;
+    padding: 20px;
+
+    margin-top: 30px;
+    margin-bottom: 20px;
+
+    border-radius: 10px;
+    background-color: var(--white);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form h1 {
+    font-size: 160%;
+    margin-top: 20px;
+    margin-bottom: 40px;
+
+    color: var(--blue);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+form fieldset {
+    width: 90%;
+    border: 2px solid var(--cream);
+    border-radius: 10px;
+    margin-bottom: 35px;
+}
+
+form fieldset legend {
+    font-size: 120%;
+    font-weight: 600;
+    border-radius: 50px;
+    padding: 10px 20px;
+    color: var(--light-black);
+    background-color: var(--cream);
+}
+
+form fieldset div label {
+    font-weight: bold;
+    color: var(--light-black);
+}
+
+form fieldset div {
+    display: block;
+    margin: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+form fieldset div input {
+    border: none;
+    font-size: 110%;
+    border-bottom: 2px solid var(--dark-blue);
+    padding-left: 15px;
+    padding-right: 10px;
+
+    width: 55%;
+}
+
+form fieldset div input#profile-picture {
+    border: none;
+    color: var(--dark-blue);
+}
+
+form fieldset div textarea {
+    border: 2px solid var(--dark-blue);
+    border-radius: 5px;
+    font-size: 140%;
+
+    padding: 10px;
+    width: 55%;
+    height: 100px;
+}
+form fieldset div textarea:focus,
+form fieldset div input:focus {
+    outline: none;
+}
+
+/* Resume Styling */
+
+div.generated-resume {
+    width: 65%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--white);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    line-height: 1.5rem;
+    margin-top: 35px;
+}
+
+h1 {
+    margin: 3px;
+    font-size: 1.3rem;
+}
+
+h1,
+h2 {
+    color: var(--light-black);
+}
+
+h2 {
+    background-color: var(--cream);
+    padding: 6px;
+    border-radius: 2px;
+}
+
+.personal-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0;
+}
+
+section.personal-info figure {
+    text-align: center;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+section.personal-info figure img {
+    /* max-width: 150px; */
+    border-radius: 3px;
+    border: 1px solid var(--cream);
+}
+
+.personal-info #contact-details {
+    margin-top: 20px;
+}
+
+section.personal-info #contact-details p {
+    font-size: 1rem;
+    padding: 0 10px;
+    margin: 5px;
+}
+
+section.personal-info #contact-details p a i {
+    font-size: 1.3rem;
+    margin-right: 3px;
+}
+
+section.personal-info #contact-details p a {
+    text-decoration: none;
+    color: var(--light-black);
+    transition: all 0.3s ease;
+}
+
+section.personal-info #contact-details p a:hover {
+    color: var(--cream);
+    cursor: pointer;
+}
+
+.personal-info #contact-details p#number {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+button {
+    height: 50px;
+
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: var(--blue);
+    color: var(--white);
+    font-size: 110%;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--dark-blue);
+    cursor: pointer;
+}
+
+/* Code For Resposiveness */
+
+@media (max-width: 650px) {
+    /* rules for form */
+    form fieldset div.area-container {
+        text-align: center;
+        display: block;
+        margin: 0;
+        margin-top: 10px;
+    }
+
+    form fieldset div textarea {
+        width: 90%;
+        margin-top: 5px;
+    }
+
+    form 
+
+    /* rules for for generated-resume*/
+    div.generated-resume {
+        width: 90vw;
+        padding: 10px;
+    }
+
+    section.personal-info {
+        display: block;
+    }
+
+    section {
+        margin-top: 15px;
+    }
+
+    img {
+        width: 120px;
+        height: 150px;
+    }
+
+    figure {
+        margin: 10px auto;
+    }
+}
